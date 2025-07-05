@@ -1,68 +1,68 @@
-# 💼 EERIS-18: Employee Expense Reporting and Information System
+# 💼 EERIS – Employee Expense Reporting and Information System
 
-A full-stack web application to automate and manage employee expense reporting, built by Group 18 as a part of our Software Engineering course.
+EERIS is a full-stack web application that helps organizations streamline employee expense reporting, automate receipt parsing, and manage real-time budgets through secure, role-based dashboards for Employees, Managers, and HR.
 
-![EERIS Dashboard](./assets/dashboard-example.png) <!-- Add an actual image later -->
-
----
-
-## 🛠️ Tech Stack
-
-| Frontend | Backend | Database | APIs & Tools |
-|----------|---------|----------|--------------|
-| React.js | FastAPI (Python) | MongoDB | OpenAI API, JWT, GitHub |
+![Dashboard Preview](./assets/employee_dashboard.png)
 
 ---
 
-## 🚀 Key Features
+## ⚙️ Tech Stack
 
-- 🔐 **Role-Based Login**: Secure dashboards for Employees, Managers, and HR.
-- 📷 **AI Receipt Parsing**: Auto-extracts data from uploaded receipt images.
-- 📊 **Budget Management**: Real-time expense visualization and summaries.
-- 🧾 **Receipt Uploads**: Attach images with metadata storage.
-- ✅ **Approval Workflow**: Managers can approve/deny transactions.
-- 👥 **HR Tools**: Add, modify, or remove employee records.
-- 🌐 **Concurrent Multi-User Access**: Built with token-based authentication.
+| Frontend | Backend | Database | AI & Auth |
+|----------|---------|----------|-----------|
+| React.js | FastAPI (Python) | MongoDB | OpenAI API, JWT Auth |
 
 ---
 
-## 🧱 System Architecture
+## 🧩 Features
 
-```plaintext
-[ React Frontend ] ⇆ [ FastAPI Backend ] ⇆ [ MongoDB ]
-           ⇩                             ⇅
-       [ JWT Auth ]         [ OpenAI API for OCR ]
-# 💼 EERIS-18: Employee Expense Reporting and Information System
-
-A full-stack web application to automate and manage employee expense reporting, built by Group 18 as a part of our Software Engineering course.
-
-![EERIS Dashboard](./assets/dashboard-example.png) <!-- Add an actual image later -->
-
----
-
-## 🛠️ Tech Stack
-
-| Frontend | Backend | Database | APIs & Tools |
-|----------|---------|----------|--------------|
-| React.js | FastAPI (Python) | MongoDB | OpenAI API, JWT, GitHub |
+- 🔐 **Login Page** — Secure user authentication
+- 🧾 **Add New Expense** — Upload receipts and add expenses
+- 📊 **Budget Summary** — Track budget usage visually
+- 🧍‍♂️ **Employee Dashboard** — View receipts and budget info
+- ✔️ **Manager Approval** — Approve or reject transactions
+- 🧑‍💼 **HR Tools** — Add/modify employee records
+- 🧮 **Spending Distribution Chart** — Pie chart of categorized expenses
+- 📷 **AI Receipt Parsing** — Extracts data from uploaded images
 
 ---
 
-## 🚀 Key Features
+## 🖥️ UI Screens
 
-- 🔐 **Role-Based Login**: Secure dashboards for Employees, Managers, and HR.
-- 📷 **AI Receipt Parsing**: Auto-extracts data from uploaded receipt images.
-- 📊 **Budget Management**: Real-time expense visualization and summaries.
-- 🧾 **Receipt Uploads**: Attach images with metadata storage.
-- ✅ **Approval Workflow**: Managers can approve/deny transactions.
-- 👥 **HR Tools**: Add, modify, or remove employee records.
-- 🌐 **Concurrent Multi-User Access**: Built with token-based authentication.
+> Make sure to store all screenshots inside the `assets/` folder and update paths as needed.
+
+| Login | Add Expense | Dashboard |
+|:--:|:--:|:--:|
+| ![Login](./assets/login.png) | ![Add Expense](./assets/add_new_expense.png) | ![Dashboard](./assets/employee_dashboard.png) |
+
+| Budget Summary | Manager Approval | HR Panel |
+|:--:|:--:|:--:|
+| ![Budget](./assets/budget_summary.png) | ![Manager](./assets/manager_approval.png) | ![HR](./assets/hr_add_new_employee.png) |
+
+| Spending Chart |
+|:--:|
+| ![Chart](./assets/spending_distribution_chart.png) |
 
 ---
 
-## 🧱 System Architecture
+## 🚀 How to Run the Project
 
-```plaintext
-[ React Frontend ] ⇆ [ FastAPI Backend ] ⇆ [ MongoDB ]
-           ⇩                             ⇅
-       [ JWT Auth ]         [ OpenAI API for OCR ]
+### 🔁 Backend Setup (FastAPI)
+
+```bash
+cd routes
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python testData.py   # Load test data
+uvicorn main:app --reload
+````
+
+### Frontend Setup (React)
+```bash
+Copy
+Edit
+cd ../FrontEnd/eerisfront
+npm install
+npm start
+````
